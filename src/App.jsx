@@ -354,7 +354,7 @@ function Navbar({ active, setActive }) {
         display:"flex", alignItems:"center", justifyContent:"space-between",
       }}>
         <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:"1.4rem", cursor:"pointer" }} onClick={() => scroll("home")}>
-          <span style={{ background:"linear-gradient(135deg,#8B5CF6,#3B82F6)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" }}>D.</span>
+          <span style={{ background:"linear-gradient(135deg,#8B5CF6,#3B82F6)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" }}></span>
         </div>
         {/* Desktop */}
         <div style={{ display:"flex", gap:8, alignItems:"center" }} className="desktop-nav">
