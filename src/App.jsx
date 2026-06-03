@@ -205,7 +205,7 @@ function Cursor() {
   return (
     <>
       <div ref={dotRef} style={{ position:"fixed", width:8, height:8, borderRadius:"50%", background:"var(--purple)", pointerEvents:"none", zIndex:9999, top:0, left:0, transition:"transform .05s" }} />
-      <div ref={ringRef} style={{ position:"fixed", width:40, height:40, borderRadius:"50%", border:"1px solid rgba(139,92,246,.5)", pointerEvents:"none", zIndex:9998, top:0, left:0, transition:"transform .1s" }} />
+      <div ref={ringRef} style={{ position:"fixed", width:40, height:40, borderRadius:"50%", border:"1px solid rgba(27, 228, 44, 0.5)", pointerEvents:"none", zIndex:9998, top:0, left:0, transition:"transform .1s" }} />
     </>
   );
 }
@@ -354,7 +354,7 @@ function Navbar({ active, setActive }) {
         display:"flex", alignItems:"center", justifyContent:"space-between",
       }}>
         <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:"1.4rem", cursor:"pointer" }} onClick={() => scroll("home")}>
-          <span style={{ background:"linear-gradient(135deg,#8B5CF6,#3B82F6)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" }}>D.</span>
+          <span style={{ background:"linear-gradient(135deg,#8B5CF6,#3B82F6)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" }}></span>
         </div>
         {/* Desktop */}
         <div style={{ display:"flex", gap:8, alignItems:"center" }} className="desktop-nav">
