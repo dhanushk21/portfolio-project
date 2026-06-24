@@ -510,7 +510,7 @@ function HeroSection() {
             <div style={{ display:"flex", gap:14, flexWrap:"wrap", marginBottom:48 }}>
               {[
                 { label:"View My Work", primary:true, href:"#projects" },
-                { label:"Download Resume", primary:false, href:"/DHANUSH_DA_resume.pdf" },
+                { label:"Download Resume", primary:false, href:"/Dhanush_K_Resume.pdf" },
                 { label:"Contact Me", primary:false, href:"#contact" },
               ].map((btn, i) => (
                 <a 
