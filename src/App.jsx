@@ -19,6 +19,16 @@ const SKILLS = [
     { name:"KPI Analysis", icon:"📈" },
     { name:"Process Improvement",  icon:"💡" },
   ]},
+  { cat: "Data Analytics", items: [
+    { name:"Data Lifecycle",  icon:"🗂️" },
+    { name:"Data Transformation",  icon:"🧹" },
+    { name:"Statistical Analysis", icon:"🔍" },
+  ]},
+  { cat: "Business Analysis", items: [
+    { name:"Requirement Gathering",  icon:"🤝" },
+    { name:"BRD/FRD Documentation",  icon:"📚" },
+    { name:"SDLC, Agile & Scrum", icon:"🧭" },
+  ]},
 ];
 
 const PROJECTS = [
@@ -143,8 +153,10 @@ const globalCSS = `
   .animate-reveal-up { animation: reveal-up .8s cubic-bezier(.16,1,.3,1) forwards; }
   .animate-gradient { animation: gradient-shift 6s ease infinite; background-size: 200% 200%; }
 
-  .section { min-height: 100vh; padding: 100px 0; position: relative; }
-
+.section {
+    padding: 80px 0;
+    position: relative;
+}
   .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
   .section-label {
@@ -502,7 +514,7 @@ function HeroSection() {
             </h2>
 
             {/* Quote */}
-            <p style={{ fontSize:"1rem", color:"#7b90ac", lineHeight:1.8, maxWidth:520, marginBottom:36, fontFamily:"'DM Sans',sans-serif", fontStyle:"italic", borderLeft:"3px solid rgba(139,92,246,.4)", paddingLeft:16 }}>
+            <p style={{ fontSize:"1rem", color:"rgb(180, 194, 213)", lineHeight:1.8, maxWidth:520, marginBottom:36, fontFamily:"'DM Sans',sans-serif", fontStyle:"italic", borderLeft:"3px solid rgba(139,92,246,.4)", paddingLeft:16 }}>
               "Transforming Raw Data Into Business Insights."
             </p>
 
@@ -510,7 +522,7 @@ function HeroSection() {
             <div style={{ display:"flex", gap:14, flexWrap:"wrap", marginBottom:48 }}>
               {[
                 { label:"View My Work", primary:true, href:"#projects" },
-                { label:"Download Resume", primary:false, href:"/Dhanush_K_Resume.pdf" },
+                { label:"Download Resume", primary:false, href:"/Dhanush K_Data Analyst.pdf" },
                 { label:"Contact Me", primary:false, href:"#contact" },
               ].map((btn, i) => (
                 <a 
@@ -649,14 +661,18 @@ function AboutSection() {
           <div style={{ opacity:vis?1:0, transform:vis?"none":"translateX(-40px)", transition:"opacity 1s, transform 1s" }}>
             <div className="section-label">About Me</div>
             <h2 className="section-title">The Mind Behind <span className="gradient-text">the Numbers</span></h2>
-            <p style={{ color:"#94A3B8", lineHeight:1.8, marginBottom:24 }}>
-              I'm a Data & Business Analyst with a passion for turning complex, messy datasets into clear strategic narratives. I believe data without storytelling is just noise and my job is to find the signal.
-            </p>
+           
+            <p style={{ color: "#94A3B8", lineHeight: 1.8, marginBottom: 24 }}>
+                 I'm a Data & Business Analyst with a passion for turning complex, messy datasets into clear strategic narratives.{" "}
+            <span style={{ color: "#49f136" }}>
+                  "I believe data without storytelling is just noise and my job is to find the signal"
+  </span>
+</p>
             <p style={{ color:"#94A3B8", lineHeight:1.8, marginBottom:24 }}>
               I turn data into insights and insights into decisions by always asking one simple question: <em style={{ color:"#49f136" }}>"What does the data actually say?"</em>
             </p>
             <p style={{ color:"#94A3B8", lineHeight:1.8, marginBottom:40 }}>
-              My goal is to bridge the gap between raw data and boardroom decisions making analytics accessible, actionable, and impactful.
+              My goal is to bridge the gap between raw data and boardroom decisions, making analytics accessible, actionable, and impactful.
             </p>
             <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16 }}>
               {["Critical Thinker","Data Storyteller","Data Problem Solver","Insight to Action"].map(t => (
@@ -1023,7 +1039,7 @@ function ContactSection() {
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <div className="section-label">Get In Touch</div>
             <h2 className="section-title" style={{ textAlign: "center" }}>Let's Build Something <span className="gradient-text">Together</span></h2>
-            <p style={{ color: "#64748B", textAlign: "center", marginTop: 16 }}>Have a project in mind or want to discuss data? I'm just one message away.</p>
+            <p style={{ color: "#abc0ea", textAlign: "center", marginTop: 16 }}>Have a project in mind or want to discuss data? I'm just one message away.</p>
           </div>
 
           <div className="glass" style={{
@@ -1104,7 +1120,6 @@ function ContactSection() {
             {[
               { icon: "💼", label: "LinkedIn", url: "https://www.linkedin.com/in/dhanushba/", color: "#0A66C2" },
               { icon: "🐙", label: "GitHub", url: "https://github.com/dhanushk21", color: "#fff" },
-              { icon: "📸", label: "Instagram", url: "https://www.instagram.com/dhanushh_07/", color: "#E1306C" },
             ].map(s => (
               <a key={s.label} href={s.url} target="_blank" rel="noreferrer" style={{
                 display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
